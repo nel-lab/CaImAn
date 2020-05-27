@@ -30,7 +30,10 @@ import sys
 from tempfile import NamedTemporaryFile
 from typing import Dict
 from warnings import warn
-import holoviews as hv
+try:
+    import holoviews as hv
+except:
+    print('Holoviews not available on colab')
 import functools as fct
 
 from ..base.rois import com
